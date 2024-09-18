@@ -1,208 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
+:root {
+    --purple-100: hsl(254, 88%, 90%);
+    --purple-500: hsl(256, 67%, 59%);
+    --yellow-100: hsl(31, 66%, 93%);
+    --yellow-500: hsl(39, 100%, 71%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 7%)
+}
+
 body {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
     font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100dvh;
-    background-color: aliceblue;
-}
-
-.grid {
-    width: 100%;
-    max-width: 1500px;
-    height: 1000px;
-    display: grid;
-    gap: 2vw;
-    padding: 2vw;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas: 
-        "hero hero aside2 aside2 aside2 aside2 aside3 aside3"
-        "hero hero aside2 aside2 aside2 aside2 aside3 aside3"
-        "hero hero aside2 aside2 aside2 aside2 aside3 aside3"
-        "hero hero aside2 aside2 aside2 aside2 aside3 aside3"
-        "aside4 aside4 aside5 aside5 aside6 aside6 aside3 aside3"
-        "aside4 aside4 aside5 aside5 aside6 aside6 aside3 aside3"
-        "aside4 aside4 aside7 aside7 aside8 aside8 aside8 aside8"
-        "aside4 aside4 aside7 aside7 aside8 aside8 aside8 aside8";
+    height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 .item {
-    border-radius: 10px;
+    padding: 1rem;
 }
 
-.item h1 {
-    padding: 0 2rem;
-    margin: 1.5rem;
-    font-weight: 500;
-    line-height: 2.5rem;
-    font-size: 45px;
+.item:nth-child(1) {
+    background-color: var(--yellow-100);
 }
 
-/* Item 1 */
-.grid .item:nth-child(1) {
-    grid-area: hero;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: antiquewhite;
+.item:nth-child(2) {
+    background-color: var(--purple-500);
 }
 
-.grid .item:nth-child(1) h1 span {
-    color: blueviolet;
-    font-style: italic;
+.item:nth-child(3) {
+    background-color: var(--purple-100);
+}
+
+.item:nth-child(4) {
+    background-color: var(--white);
+}
+
+.item:nth-child(5) {
+    background-color: var(--yellow-500);
+}
+
+.item:nth-child(6) {
+    background-color: var(--yellow-500);
+}
+
+.item:nth-child(7) {
+    background-color: var(--white);
+}
+
+.item:nth-child(8) {
+    background-color: var(--purple-500);
 }
 
 
-.grid .item:nth-child(1) img {
-    width: 250px;
-    height: 100px;
-    object-fit: contain;
-}
 
-
-/* Item 2 */
-.grid .item:nth-child(2) {
-    grid-area: aside2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(115, 18, 226);
-}
-
-.grid .item:nth-child(2) h1 {
-    color: white;
-    font-size: 70px;
-    text-align: center;
-    margin: .8rem;
-}
-
-.grid .item:nth-child(2) h1 span {
-    color: rgb(204, 188, 39);
-}
-
-.grid .item:nth-child(2) img {
-    margin-top: 2rem;
-    width: 200px;
-}
-
-.grid .item:nth-child(2) small {
-    margin-top: .5rem;
-    color: white;
-    font-size: 18px;
-}
-
-/* Item 3 */
-.grid .item:nth-child(3) {
-    grid-area: aside3;
-    background-color: rgb(234, 214, 253);
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.grid .item:nth-child(3) h1 {
-    font-size: 40px;
-}
-
-.grid .item:nth-child(3) img {
-    height: 400px;
-    padding-left: 2.5rem;
-}
-
-.grid .item:nth-child(3) p {
-    font-weight: 300;
-    padding: 0 3rem;
-    font-size: 24px;
-}
-
-/* Item 4 */
-.grid .item:nth-child(4) {
-    grid-area: aside4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(255, 187, 0);
-}
-
-.grid .item:nth-child(4) img {
-    width: 80%;
-}
-
-/* Item 5 */
-.grid .item:nth-child(5) {
-    grid-area: aside5;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: hidden;
-    background-color: white;
-}
-
-.grid .item:nth-child(5) img {
-    width: 100%;
-    padding-left: 3rem;
-}
-
-/* Item 6 */
-.grid .item:nth-child(6) {
-    grid-area: aside6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(221, 184, 21);
-}
-
-.grid .item:nth-child(6) img {
-    width: 80%;
-}
-
-/* Item 7 */
-.grid .item:nth-child(7) {
-    grid-area: aside7;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: white
-}
-
-.grid .item:nth-child(7) span {
-    font-size: 60px;
-}
-
-.grid .item:nth-child(7) p {
-    font-size: 20px;
-}
-
-.grid .item:nth-child(7) img {
-    width: 70%;
-}
-
-/* Item 8 */
-.grid .item:nth-child(8) {
-    grid-area: aside8;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(107, 43, 226);
-}
-
-.grid .item:nth-child(8) img {
-    width: 40%;
-}
-
-.grid .item:nth-child(8) h1 {
-    color: white;
-}
